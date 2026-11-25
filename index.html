@@ -1,0 +1,1462 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TRANSGULF READYMIX | Concrete Technical Seminar Registration</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Inter & Roboto Slab -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Roboto+Slab:wght@700;800&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        brand: ['Roboto Slab', 'serif'],
+                    },
+                    colors: {
+                        tg: {
+                            dark: '#1a1c1e',
+                            slate: '#26292c',
+                            concrete: '#64748b',
+                            grey: '#9ca3af',
+                            green: '#3f9c35',
+                            greenDark: '#2f7d27',
+                            greenLight: '#4caf50',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        ::-webkit-scrollbar {
+            width: 6px;
+            height: 6px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #1a1c1e;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #4b5563;
+            border-radius: 3px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #4caf50;
+        }
+        .fade-in {
+            animation: fadeIn 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(6px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        @media print {
+            body * {
+                visibility: hidden;
+            }
+            #printable-badge-area, #printable-badge-area * {
+                visibility: visible;
+            }
+            #printable-badge-area {
+                position: fixed;
+                left: 50%;
+                top: 8%;
+                transform: translateX(-50%);
+                width: 92%;
+                max-width: 480px;
+                box-shadow: none !important;
+                border: 2px solid #1a1c1e !important;
+            }
+        }
+    </style>
+</head>
+<body class="bg-zinc-100 text-zinc-900 font-sans antialiased min-h-screen flex flex-col selection:bg-tg-green selection:text-white">
+
+    <!-- ========================================================= -->
+    <!-- TOP BRAND HEADER (WHITE-BACKGROUND TRANSGULF LOGO BANNER) -->
+    <!-- ========================================================= -->
+    <header class="bg-white text-zinc-900 border-b-4 border-tg-green sticky top-0 z-30 shadow-md">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-center py-3 gap-4">
+                
+                <!-- Official White-Background TRANSGULF READYMIX Logo Banner -->
+                <div class="flex items-center select-none bg-white px-2 py-1 rounded-xl">
+                    <img id="header-custom-logo" src="" alt="Transgulf Readymix Logo" class="hidden h-14 sm:h-16 w-auto max-w-[340px] object-contain rounded" />
+                    <svg id="header-default-svg" class="h-14 sm:h-16 w-auto shrink-0" viewBox="0 0 490 144" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Transgulf Readymix - Engineered For You">
+                        <defs>
+                            <linearGradient id="tgArcGradHeader" x1="58" y1="88" x2="104" y2="106" gradientUnits="userSpaceOnUse">
+                                <stop offset="0%" stop-color="#3F9C35"/>
+                                <stop offset="55%" stop-color="#3F9C35"/>
+                                <stop offset="92%" stop-color="#9EA4AA"/>
+                                <stop offset="100%" stop-color="#9EA4AA"/>
+                            </linearGradient>
+                            <linearGradient id="tgStrokeGradHeader" x1="58" y1="88" x2="104" y2="106" gradientUnits="userSpaceOnUse">
+                                <stop offset="0%" stop-color="#1E1E1E"/>
+                                <stop offset="65%" stop-color="#2B2B2B"/>
+                                <stop offset="100%" stop-color="#3A3A3A"/>
+                            </linearGradient>
+                        </defs>
+
+                        <rect width="490" height="144" rx="6" fill="#FFFFFF"/>
+
+                        <g>
+                            <path d="M12 10 H83 V31 H57 V104 H37 V31 H12 V10 Z"
+                                  fill="#1E1E1E" stroke="#1E1E1E" stroke-width="2" stroke-linejoin="round"/>
+                            <path d="M14.5 12.5 H80.5 V28.5 H54.5 V101.5 H39.5 V28.5 H14.5 V12.5 Z"
+                                  fill="#FFFFFF"/>
+                            <path d="M16.5 14.5 H78.5 V26.5 H52.5 V99.5 H41.5 V26.5 H16.5 V14.5 Z"
+                                  fill="#3F9C35"/>
+
+                            <path d="M92 12 C58 18 42 44 42 68 C42 97 65 116 98 116 C129 116 146 95 148 63 H78 L93 80 H125 C121 91 110 96 98 96 C75 96 62 84 62 67 C62 49 74 35 95 29 L92 12 Z"
+                                  fill="#FFFFFF" stroke="#FFFFFF" stroke-width="6" stroke-linejoin="round"/>
+                            <path d="M92 12 C58 18 42 44 42 68 C42 97 65 116 98 116 C129 116 146 95 148 63 H78 L93 80 H125 C121 91 110 96 98 96 C75 96 62 84 62 67 C62 49 74 35 95 29 L92 12 Z"
+                                  fill="url(#tgStrokeGradHeader)"/>
+                            <path d="M90.5 14.8 C60 20.5 44.8 45 44.8 68 C44.8 95.2 66.5 113.2 98 113.2 C127 113.2 143.2 93.8 145.1 65.8 H84.2 L94.2 77.2 H128.8 C124.2 91.5 111.5 98.8 98 98.8 C73.2 98.8 59.2 85.5 59.2 67 C59.2 47.5 72.2 33 93.2 27.2 L90.5 14.8 Z"
+                                  fill="#FFFFFF"/>
+                            <path d="M89.2 17.2 C61.5 22.8 47.2 46 47.2 68 C47.2 93.5 67.8 110.8 98 110.8 C125.2 110.8 140.5 92.8 142.5 68.2 H89.8 L95.4 74.8 H131.8 C126.8 91.8 112.8 101.2 98 101.2 C71.5 101.2 56.8 86.8 56.8 67 C56.8 46.2 70.5 31.2 91.5 25.4 L89.2 17.2 Z"
+                                  fill="url(#tgArcGradHeader)"/>
+
+                            <g transform="translate(76, 8)">
+                                <path d="M16 14 L23 14 L21 24 L16 24 Z" fill="#FFFFFF" stroke="#1E1E1E" stroke-width="1.8" stroke-linejoin="round"/>
+                                <path d="M17 23 L1 40 L1 49 L11 49 L21 26 Z" fill="#FFFFFF" stroke="#1E1E1E" stroke-width="1.8" stroke-linejoin="round"/>
+                                <path d="M3.5 41 L15 28 M3.5 45 L17 31 M3 47 H10 M4 43 H12 M6 39 H14" stroke="#1E1E1E" stroke-width="1.1"/>
+
+                                <path d="M21 17 L27 5 L49 12 L59 24 L54 37 L38 35 L23 26 Z"
+                                      fill="#FFFFFF" stroke="#1E1E1E" stroke-width="2" stroke-linejoin="round"/>
+                                <path d="M22 3 H33 L35 12 L21 12 Z" fill="#FFFFFF" stroke="#1E1E1E" stroke-width="2" stroke-linejoin="round"/>
+                                <circle cx="32" cy="12" r="2.2" fill="#1E1E1E"/>
+                                <path d="M35 8 C46 11 53 17 57 24 L53 27 C48 20 41 15 33 13 Z" fill="#3F9C35" stroke="#1E1E1E" stroke-width="1.3"/>
+                                <path d="M29 29 L41 34" stroke="#9EA4AA" stroke-width="2.5"/>
+
+                                <rect x="57" y="22" width="10" height="16" rx="1.2" fill="#3F9C35" stroke="#1E1E1E" stroke-width="1.8"/>
+
+                                <path d="M22 25 L36 25 L41 38 L16 38 L19 31 Z" fill="#FFFFFF" stroke="#1E1E1E" stroke-width="1.9" stroke-linejoin="round"/>
+                                <polygon points="22,27 26,27 26,32 19.5,32" fill="#1E1E1E"/>
+
+                                <rect x="14" y="38" width="53" height="5" rx="1.2" fill="#1E1E1E"/>
+
+                                <circle cx="20" cy="45.5" r="4.6" fill="#1E1E1E"/>
+                                <circle cx="20" cy="45.5" r="1.4" fill="#FFFFFF"/>
+                                <circle cx="31" cy="45.5" r="4.6" fill="#1E1E1E"/>
+                                <circle cx="31" cy="45.5" r="1.4" fill="#FFFFFF"/>
+                                <circle cx="48" cy="45.5" r="4.6" fill="#1E1E1E"/>
+                                <circle cx="48" cy="45.5" r="1.4" fill="#FFFFFF"/>
+                                <circle cx="62" cy="45.5" r="4.6" fill="#1E1E1E"/>
+                                <circle cx="62" cy="45.5" r="1.4" fill="#FFFFFF"/>
+                            </g>
+                        </g>
+
+                        <text x="164" y="54" fill="#3F9C35" font-family="'Roboto Slab', Georgia, serif" font-weight="800" font-size="43" letter-spacing="1.2">TRANSGULF</text>
+                        <text x="164" y="100" fill="#9EA4AA" font-family="'Roboto Slab', Georgia, serif" font-weight="700" font-size="41" letter-spacing="2.4">READYMIX</text>
+
+                        <line x1="12" y1="125" x2="234" y2="125" stroke="#3F9C35" stroke-width="3.2"/>
+                        <line x1="12" y1="133" x2="234" y2="133" stroke="#9EA4AA" stroke-width="3.2"/>
+
+                        <text x="246" y="134" fill="#3F9C35" font-family="'Inter', Arial, sans-serif" font-weight="600" font-size="18.5" letter-spacing="1.8">ENGINEERED FOR YOU</text>
+                    </svg>
+                </div>
+
+                <!-- Right Controls: Cloud Status + View Switcher -->
+                <div class="flex flex-col sm:flex-row items-center gap-3 w-full md:w-auto">
+                    <div id="sync-status-pill" class="flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-50 border border-emerald-200 text-xs font-medium text-emerald-800">
+                        <span id="sync-dot" class="w-2 h-2 rounded-full bg-tg-green"></span>
+                        <span id="sync-text">Formspree Active</span>
+                    </div>
+
+                    <nav class="flex bg-zinc-100 p-1 rounded-xl border border-zinc-200 w-full sm:w-auto">
+                        <button id="tab-register" onclick="switchView('register')"
+                            class="flex-1 sm:flex-none px-4 py-2 rounded-lg text-sm font-semibold transition-all duration-200 bg-tg-green text-white shadow-sm">
+                            Public Registration
+                        </button>
+                        <button id="tab-admin" onclick="switchView('admin')"
+                            class="flex-1 sm:flex-none px-4 py-2 rounded-lg text-sm font-semibold transition-all duration-200 text-zinc-600 hover:text-zinc-900 flex items-center justify-center gap-2">
+                            <span>Organizer Dashboard</span>
+                            <span id="nav-badge-count" class="bg-zinc-200 text-zinc-800 text-xs py-0.5 px-2 rounded-full font-bold">0/50</span>
+                        </button>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Toast Notification Container -->
+    <div id="toast-container" class="fixed bottom-5 right-5 z-50 flex flex-col gap-2 max-w-sm w-full pointer-events-none px-4 sm:px-0"></div>
+
+    <!-- Organizer PIN Modal -->
+    <div id="pin-modal" class="fixed inset-0 z-50 bg-black/75 backdrop-blur-sm hidden items-center justify-center p-4">
+        <div class="bg-white rounded-2xl max-w-sm w-full p-6 shadow-2xl border border-zinc-200 fade-in">
+            <div class="flex items-center justify-between mb-2">
+                <h3 class="text-lg font-bold text-zinc-900">Organizer PIN Required</h3>
+                <button type="button" onclick="closePinModal()" class="text-zinc-400 hover:text-zinc-700 font-bold text-lg leading-none">&times;</button>
+            </div>
+            <p class="text-xs text-zinc-500 mb-4">Enter your Organizer PIN to manage seat capacity, view attendees, or export CSV.</p>
+            <form id="pin-form" class="space-y-4">
+                <input type="password" id="organizer-pin-input" inputmode="numeric" maxlength="8" placeholder="Enter PIN" required
+                    class="w-full px-4 py-3 rounded-xl border border-zinc-300 text-center text-lg font-bold tracking-[0.35em] text-zinc-900 focus:outline-none focus:ring-2 focus:ring-tg-green/25 focus:border-tg-green">
+                <p id="pin-error-msg" class="text-xs font-semibold text-red-600 hidden">Incorrect PIN. Please try again.</p>
+                <div class="flex justify-end gap-2.5">
+                    <button type="button" onclick="closePinModal()" class="px-4 py-2 rounded-xl text-xs font-semibold text-zinc-700 bg-zinc-100 hover:bg-zinc-200 transition">
+                        Cancel
+                    </button>
+                    <button type="submit" class="px-5 py-2 rounded-xl text-xs font-bold text-white bg-tg-green hover:bg-tg-greenDark transition">
+                        Unlock Dashboard
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Custom Confirmation Modal -->
+    <div id="confirm-modal" class="fixed inset-0 z-50 bg-black/75 backdrop-blur-sm hidden items-center justify-center p-4">
+        <div class="bg-white rounded-2xl max-w-md w-full p-6 shadow-2xl border border-zinc-200 fade-in">
+            <div class="flex items-center gap-3 text-red-600 mb-3">
+                <div class="w-10 h-10 rounded-full bg-red-50 flex items-center justify-center shrink-0">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path>
+                    </svg>
+                </div>
+                <h3 id="modal-title" class="text-lg font-bold text-zinc-900">Confirm Action</h3>
+            </div>
+            <p id="modal-message" class="text-sm text-zinc-600 mb-6 leading-relaxed">Are you sure you want to proceed?</p>
+            <div class="flex justify-end gap-3">
+                <button id="modal-cancel-btn" class="px-4 py-2.5 rounded-xl text-sm font-semibold text-zinc-700 bg-zinc-100 hover:bg-zinc-200 transition">
+                    Cancel
+                </button>
+                <button id="modal-confirm-btn" class="px-4 py-2.5 rounded-xl text-sm font-semibold text-white bg-red-600 hover:bg-red-700 shadow-sm transition">
+                    Confirm
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content Container -->
+    <main class="flex-grow max-w-6xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-8">
+
+        <!-- ========================================================= -->
+        <!-- VIEW 1: PUBLIC ATTENDEE REGISTRATION PORTAL               -->
+        <!-- ========================================================= -->
+        <section id="view-register" class="fade-in">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+                
+                <!-- Left Column: Event Invitation & Details -->
+                <div class="lg:col-span-5 space-y-6">
+                    <div class="bg-tg-dark rounded-2xl p-6 sm:p-8 text-white shadow-xl border border-zinc-800 relative overflow-hidden">
+                        <div class="absolute -top-16 -right-16 w-48 h-48 bg-tg-green/15 rounded-full blur-2xl pointer-events-none"></div>
+                        <div class="absolute bottom-0 left-0 w-full h-1.5 bg-gradient-to-r from-tg-green via-tg-grey to-tg-green"></div>
+
+                        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold bg-tg-slate text-tg-green border border-zinc-700 mb-4">
+                            <span id="hero-status-dot" class="w-2 h-2 rounded-full bg-tg-green animate-pulse"></span>
+                            <span id="hero-status-label">Official Partner Invitation</span>
+                        </div>
+
+                        <h1 class="text-2xl sm:text-3xl font-extrabold tracking-tight leading-tight mb-2">
+                            Concrete Technical Seminar
+                        </h1>
+                        <p class="text-xs font-semibold uppercase tracking-widest text-tg-grey">
+                            Building the Future: Innovation in Ready-Mix &amp; Construction Technology
+                        </p>
+                    </div>
+
+                    <!-- Event Details Card -->
+                    <div class="bg-white rounded-2xl p-6 border border-zinc-200 shadow-sm space-y-5">
+                        <div>
+                            <h2 class="text-xs font-bold uppercase tracking-wider text-zinc-400 mb-3">Event Schedule &amp; Venue</h2>
+                            <div class="space-y-3.5">
+                                <div class="flex items-start gap-3.5">
+                                    <div class="p-2.5 rounded-xl bg-tg-green/10 text-tg-greenDark shrink-0">
+                                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
+                                    </div>
+                                    <div>
+                                        <p class="text-sm font-bold text-zinc-900">Saturday, December 5, 2026</p>
+                                        <p class="text-xs text-zinc-500 mt-0.5">8:00 AM – 5:00 PM</p>
+                                    </div>
+                                </div>
+
+                                <div class="flex items-start gap-3.5">
+                                    <div class="p-2.5 rounded-xl bg-tg-green/10 text-tg-greenDark shrink-0">
+                                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+                                    </div>
+                                    <div>
+                                        <p class="text-sm font-bold text-zinc-900">Courtyard by Marriott Riyadh Diplomatic Quarter (Assafeer Hall)</p>                                        
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Column: Registration Form / VIP Digital Pass / Waitlist State -->
+                <div class="lg:col-span-7">
+                    
+                    <!-- STATE A: Active Registration Form -->
+                    <div id="registration-form-card" class="bg-white rounded-2xl p-6 sm:p-8 border border-zinc-200 shadow-sm">
+                        <div class="border-b border-zinc-100 pb-5 mb-6 flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+                            <div>
+                                <h2 class="text-xl font-bold text-zinc-900">Attendee Registration</h2>
+                                <p class="text-sm text-zinc-500 mt-0.5">Complete all fields below to reserve your seat and receive your VIP pass.</p>
+                            </div>
+                            <span class="inline-flex items-center self-start sm:self-center px-2.5 py-1 rounded-md text-xs font-semibold bg-zinc-100 text-zinc-700 border border-zinc-200">
+                                Required Fields *
+                            </span>
+                        </div>
+
+                        <form id="registration-form" novalidate class="space-y-5">
+                            <div>
+                                <label for="fullName" class="block text-sm font-semibold text-zinc-800 mb-1.5">
+                                    Person Name <span class="text-red-500">*</span>
+                                </label>
+                                <input type="text" id="fullName" name="Person Name" placeholder="e.g., Eng. Tariq Al-Harbi" required
+                                    class="w-full px-4 py-3 rounded-xl border border-zinc-300 text-zinc-900 placeholder-zinc-400 focus:outline-none focus:ring-2 focus:ring-tg-green/25 focus:border-tg-green transition">
+                                <p id="error-fullName" class="text-xs font-medium text-red-600 mt-1.5 hidden"></p>
+                            </div>
+
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                                <div>
+                                    <label for="company" class="block text-sm font-semibold text-zinc-800 mb-1.5">
+                                        Company <span class="text-red-500">*</span>
+                                    </label>
+                                    <input type="text" id="company" name="Company" placeholder="e.g., Al-Bawani Construction" required
+                                        class="w-full px-4 py-3 rounded-xl border border-zinc-300 text-zinc-900 placeholder-zinc-400 focus:outline-none focus:ring-2 focus:ring-tg-green/25 focus:border-tg-green transition">
+                                    <p id="error-company" class="text-xs font-medium text-red-600 mt-1.5 hidden"></p>
+                                </div>
+
+                                <div>
+                                    <label for="position" class="block text-sm font-semibold text-zinc-800 mb-1.5">
+                                        Position <span class="text-red-500">*</span>
+                                    </label>
+                                    <input type="text" id="position" name="Position" placeholder="e.g., Projects Director" required
+                                        class="w-full px-4 py-3 rounded-xl border border-zinc-300 text-zinc-900 placeholder-zinc-400 focus:outline-none focus:ring-2 focus:ring-tg-green/25 focus:border-tg-green transition">
+                                    <p id="error-position" class="text-xs font-medium text-red-600 mt-1.5 hidden"></p>
+                                </div>
+                            </div>
+
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                                <div>
+                                    <label for="email" class="block text-sm font-semibold text-zinc-800 mb-1.5">
+                                        Email <span class="text-red-500">*</span>
+                                    </label>
+                                    <input type="email" id="email" name="Email" placeholder="name@company.com" required
+                                        class="w-full px-4 py-3 rounded-xl border border-zinc-300 text-zinc-900 placeholder-zinc-400 focus:outline-none focus:ring-2 focus:ring-tg-green/25 focus:border-tg-green transition">
+                                    <p id="error-email" class="text-xs font-medium text-red-600 mt-1.5 hidden"></p>
+                                </div>
+
+                                <div>
+                                    <label for="mobile" class="block text-sm font-semibold text-zinc-800 mb-1.5">
+                                        Mobile Number <span class="text-red-500">*</span>
+                                    </label>
+                                    <input type="tel" id="mobile" name="Mobile Number" placeholder="+966 50 123 4567" required
+                                        class="w-full px-4 py-3 rounded-xl border border-zinc-300 text-zinc-900 placeholder-zinc-400 focus:outline-none focus:ring-2 focus:ring-tg-green/25 focus:border-tg-green transition">
+                                    <p id="error-mobile" class="text-xs font-medium text-red-600 mt-1.5 hidden"></p>
+                                </div>
+                            </div>
+
+                            <div id="form-alert" class="hidden rounded-xl p-4 bg-red-50 border border-red-200 flex items-start gap-3">
+                                <svg class="w-5 h-5 text-red-600 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                                <p id="form-alert-text" class="text-sm text-red-700 font-medium"></p>
+                            </div>
+
+                            <div class="pt-2">
+                                <button type="submit" id="submit-btn"
+                                    class="w-full py-3.5 px-6 rounded-xl bg-tg-green hover:bg-tg-greenDark active:scale-[0.99] text-white font-bold text-base shadow-md shadow-tg-green/25 transition-all flex items-center justify-center gap-2">
+                                    <span>Confirm Registration</span>
+                                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+
+                    <!-- STATE B: Instant Digital VIP Pass -->
+                    <div id="confirmation-card" class="hidden bg-white rounded-2xl p-6 sm:p-8 border border-tg-green/40 shadow-lg fade-in">
+                        <div class="text-center mb-6">
+                            <div class="w-14 h-14 rounded-full bg-tg-green/15 text-tg-greenDark flex items-center justify-center mx-auto mb-3">
+                                <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"></path></svg>
+                            </div>
+                            <span class="inline-block px-3 py-1 rounded-full text-xs font-bold bg-tg-green/10 text-tg-greenDark mb-1.5">
+                                SEAT RESERVED &amp; CONFIRMED
+                            </span>
+                            <h3 class="text-2xl font-bold text-zinc-900">Your Digital VIP Pass</h3>
+                            <p class="text-sm text-zinc-500 mt-1">Present this pass at the registration desk upon arrival.</p>
+                        </div>
+
+                        <div id="printable-badge-area" class="bg-[#181818] text-white rounded-2xl border-2 border-tg-green overflow-hidden mb-6 shadow-md">
+                            <div class="bg-white px-5 py-3.5 border-b-2 border-tg-green flex items-center justify-between gap-3">
+                                <div>
+                                    <img id="pass-custom-logo" src="" alt="Transgulf Readymix" class="hidden h-11 w-auto max-w-[240px] object-contain" />
+                                    <svg id="pass-default-svg" class="h-11 w-auto" viewBox="0 0 490 144" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Transgulf Readymix">
+                                        <defs>
+                                            <linearGradient id="tgArcGradPass" x1="58" y1="88" x2="104" y2="106" gradientUnits="userSpaceOnUse">
+                                                <stop offset="0%" stop-color="#3F9C35"/>
+                                                <stop offset="55%" stop-color="#3F9C35"/>
+                                                <stop offset="92%" stop-color="#9EA4AA"/>
+                                                <stop offset="100%" stop-color="#9EA4AA"/>
+                                            </linearGradient>
+                                        </defs>
+                                        <rect width="490" height="144" rx="4" fill="#FFFFFF"/>
+                                        <path d="M12 10 H83 V31 H57 V104 H37 V31 H12 V10 Z" fill="#1E1E1E" stroke="#1E1E1E" stroke-width="2" stroke-linejoin="round"/>
+                                        <path d="M14.5 12.5 H80.5 V28.5 H54.5 V101.5 H39.5 V28.5 H14.5 V12.5 Z" fill="#FFFFFF"/>
+                                        <path d="M16.5 14.5 H78.5 V26.5 H52.5 V99.5 H41.5 V26.5 H16.5 V14.5 Z" fill="#3F9C35"/>
+                                        <path d="M92 12 C58 18 42 44 42 68 C42 97 65 116 98 116 C129 116 146 95 148 63 H78 L93 80 H125 C121 91 110 96 98 96 C75 96 62 84 62 67 C62 49 74 35 95 29 L92 12 Z" fill="#FFFFFF" stroke="#FFFFFF" stroke-width="6" stroke-linejoin="round"/>
+                                        <path d="M92 12 C58 18 42 44 42 68 C42 97 65 116 98 116 C129 116 146 95 148 63 H78 L93 80 H125 C121 91 110 96 98 96 C75 96 62 84 62 67 C62 49 74 35 95 29 L92 12 Z" fill="#1E1E1E"/>
+                                        <path d="M90.5 14.8 C60 20.5 44.8 45 44.8 68 C44.8 95.2 66.5 113.2 98 113.2 C127 113.2 143.2 93.8 145.1 65.8 H84.2 L94.2 77.2 H128.8 C124.2 91.5 111.5 98.8 98 98.8 C73.2 98.8 59.2 85.5 59.2 67 C59.2 47.5 72.2 33 93.2 27.2 L90.5 14.8 Z" fill="#FFFFFF"/>
+                                        <path d="M89.2 17.2 C61.5 22.8 47.2 46 47.2 68 C47.2 93.5 67.8 110.8 98 110.8 C125.2 110.8 140.5 92.8 142.5 68.2 H89.8 L95.4 74.8 H131.8 C126.8 91.8 112.8 101.2 98 101.2 C71.5 101.2 56.8 86.8 56.8 67 C56.8 46.2 70.5 31.2 91.5 25.4 L89.2 17.2 Z" fill="url(#tgArcGradPass)"/>
+                                        <g transform="translate(76, 8)">
+                                            <path d="M16 14 L23 14 L21 24 L16 24 Z" fill="#FFFFFF" stroke="#1E1E1E" stroke-width="1.8"/>
+                                            <path d="M17 23 L1 40 L1 49 L11 49 L21 26 Z" fill="#FFFFFF" stroke="#1E1E1E" stroke-width="1.8"/>
+                                            <path d="M21 17 L27 5 L49 12 L59 24 L54 37 L38 35 L23 26 Z" fill="#FFFFFF" stroke="#1E1E1E" stroke-width="2"/>
+                                            <path d="M22 3 H33 L35 12 L21 12 Z" fill="#FFFFFF" stroke="#1E1E1E" stroke-width="2"/>
+                                            <path d="M35 8 C46 11 53 17 57 24 L53 27 C48 20 41 15 33 13 Z" fill="#3F9C35" stroke="#1E1E1E" stroke-width="1.3"/>
+                                            <rect x="57" y="22" width="10" height="16" rx="1.2" fill="#3F9C35" stroke="#1E1E1E" stroke-width="1.8"/>
+                                            <path d="M22 25 L36 25 L41 38 L16 38 L19 31 Z" fill="#FFFFFF" stroke="#1E1E1E" stroke-width="1.9"/>
+                                            <rect x="14" y="38" width="53" height="5" rx="1.2" fill="#1E1E1E"/>
+                                            <circle cx="20" cy="45.5" r="4.6" fill="#1E1E1E"/>
+                                            <circle cx="31" cy="45.5" r="4.6" fill="#1E1E1E"/>
+                                            <circle cx="48" cy="45.5" r="4.6" fill="#1E1E1E"/>
+                                            <circle cx="62" cy="45.5" r="4.6" fill="#1E1E1E"/>
+                                        </g>
+                                        <text x="164" y="54" fill="#3F9C35" font-family="'Roboto Slab', Georgia, serif" font-weight="800" font-size="43" letter-spacing="1.2">TRANSGULF</text>
+                                        <text x="164" y="100" fill="#9EA4AA" font-family="'Roboto Slab', Georgia, serif" font-weight="700" font-size="41" letter-spacing="2.4">READYMIX</text>
+                                        <line x1="12" y1="125" x2="234" y2="125" stroke="#3F9C35" stroke-width="3.2"/>
+                                        <line x1="12" y1="133" x2="234" y2="133" stroke="#9EA4AA" stroke-width="3.2"/>
+                                        <text x="246" y="134" fill="#3F9C35" font-family="'Inter', Arial, sans-serif" font-weight="600" font-size="18.5" letter-spacing="1.8">ENGINEERED FOR YOU</text>
+                                    </svg>
+                                </div>
+                                <span class="text-[10px] font-extrabold uppercase tracking-widest px-2.5 py-1 rounded bg-tg-dark text-white shrink-0">
+                                    VIP PASS
+                                </span>
+                            </div>
+
+                            <div class="p-6">
+                                <div class="flex justify-between items-start border-b border-zinc-700 pb-4 mb-4 gap-4">
+                                    <div>
+                                        <p class="text-xs text-zinc-400">Concrete Technical Seminar • Dec 5, 2026 (8:00 AM – 5:00 PM)</p>
+                                        <p class="text-[11px] text-zinc-400 mt-0.5">Courtyard by Marriott Riyadh Diplomatic Quarter (Assafeer Hall)</p>
+                                        <p id="badge-id" class="text-2xl font-mono font-extrabold text-white mt-1.5">TGR-1001</p>
+                                    </div>
+                                    <div class="bg-white p-2 rounded-lg shrink-0" title="Entry Verification Code">
+                                        <svg class="w-14 h-14 text-tg-dark" viewBox="0 0 36 36" fill="currentColor">
+                                            <path d="M2 2h10v10H2V2zm2 2v6h6V4H4zm2 2h2v2H6V6zm18-4h10v10H24V2zm2 2v6h6V4h-6zm2 2h2v2h-2V6zM2 24h10v10H2V24zm2 2v6h6v-6H4zm2 2h2v2H6v-2zm10-24h2v4h-2V4zm4 2h2v4h-2V6zm-6 6h4v2h-4v-2zm6 2h4v2h-4v-2zm-14 4h4v2H6v-2zm6 0h6v2h-6v-2zm8 0h2v4h-2v-4zm4 2h4v2h-4v-2zm-16 4h2v4h-2v-4zm4 2h4v2h-4v-2zm6-2h4v4h-4v-4zm6 4h4v2h-4v-2zm-10 4h6v2h-6v-2zm8 2h2v4h-2v-4zm4 0h4v4h-4v-4z"/>
+                                        </svg>
+                                    </div>
+                                </div>
+
+                                <div class="space-y-3">
+                                    <div>
+                                        <p class="text-[11px] uppercase tracking-wider text-zinc-400 font-semibold">Attendee Name</p>
+                                        <p id="badge-name" class="text-lg font-bold text-white">—</p>
+                                    </div>
+                                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                                        <div>
+                                            <p class="text-[11px] uppercase tracking-wider text-zinc-400 font-semibold">Company</p>
+                                            <p id="badge-company" class="text-sm font-semibold text-zinc-100">—</p>
+                                        </div>
+                                        <div>
+                                            <p class="text-[11px] uppercase tracking-wider text-zinc-400 font-semibold">Position</p>
+                                            <p id="badge-position" class="text-sm font-semibold text-tg-greenLight">—</p>
+                                        </div>
+                                    </div>
+                                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2 border-t border-zinc-800">
+                                        <div>
+                                            <p class="text-[11px] text-zinc-400">Email</p>
+                                            <p id="badge-email" class="text-xs font-medium text-zinc-300 truncate">—</p>
+                                        </div>
+                                        <div>
+                                            <p class="text-[11px] text-zinc-400">Mobile Number</p>
+                                            <p id="badge-mobile" class="text-xs font-medium text-zinc-300">—</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
+                            <button onclick="downloadBadgeFile()"
+                                class="py-2.5 px-4 rounded-xl border border-zinc-300 hover:bg-zinc-50 text-zinc-800 font-semibold text-sm transition flex items-center justify-center gap-2">
+                                <svg class="w-4 h-4 text-tg-greenDark" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path></svg>
+                                <span>Download Pass</span>
+                            </button>
+                            <button onclick="window.print()"
+                                class="py-2.5 px-4 rounded-xl border border-zinc-300 hover:bg-zinc-50 text-zinc-800 font-semibold text-sm transition flex items-center justify-center gap-2">
+                                <svg class="w-4 h-4 text-zinc-700" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4a2 2 0 00-2-2H9a2 2 0 00-2 2v4a2 2 0 002 2zm8-12V5a2 2 0 00-2-2H9a2 2 0 00-2 2v4h10z"></path></svg>
+                                <span>Print / PDF</span>
+                            </button>
+                            <button onclick="resetToForm()" id="register-another-btn"
+                                class="py-2.5 px-4 rounded-xl bg-tg-green hover:bg-tg-greenDark text-white font-semibold text-sm transition">
+                                Register Another
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- STATE C: Registration Full / Capacity Reached Notice + Priority Waitlist -->
+                    <div id="capacity-full-card" class="hidden bg-white rounded-2xl p-6 sm:p-8 border border-amber-300 shadow-sm fade-in">
+                        <div class="text-center mb-6">
+                            <div class="w-16 h-16 rounded-2xl bg-amber-50 text-amber-600 border border-amber-200 flex items-center justify-center mx-auto mb-4">
+                                <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path></svg>
+                            </div>
+                            <span class="inline-block px-3 py-1 rounded-full text-xs font-bold bg-amber-100 text-amber-800 mb-2">
+                                REGISTRATION FULL • CAPACITY REACHED
+                            </span>
+                            <h3 class="text-2xl font-bold text-zinc-900">All <span id="full-cap-number">50</span> Seats Are Reserved</h3>
+                            <p class="text-sm text-zinc-600 max-w-md mx-auto mt-1.5 leading-relaxed">
+                                Thank you for your interest in the Transgulf Readymix Concrete Technical Seminar. Join our Priority Waitlist below to be notified immediately if additional capacity is released.
+                            </p>
+                        </div>
+
+                        <form id="waitlist-form" class="bg-zinc-50 rounded-xl p-5 border border-zinc-200 space-y-4">
+                            <div class="flex items-center justify-between">
+                                <h4 class="text-sm font-bold text-zinc-900">Join Priority Waitlist</h4>
+                                <span class="text-xs font-medium text-zinc-500">Overflow Reservation</span>
+                            </div>
+
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3.5">
+                                <input type="text" id="wl-name" placeholder="Person Name *" required
+                                    class="w-full px-3.5 py-2.5 rounded-xl border border-zinc-300 bg-white text-sm focus:outline-none focus:border-tg-green">
+                                <input type="text" id="wl-company" placeholder="Company *" required
+                                    class="w-full px-3.5 py-2.5 rounded-xl border border-zinc-300 bg-white text-sm focus:outline-none focus:border-tg-green">
+                                <input type="text" id="wl-position" placeholder="Position *" required
+                                    class="w-full px-3.5 py-2.5 rounded-xl border border-zinc-300 bg-white text-sm focus:outline-none focus:border-tg-green">
+                                <input type="email" id="wl-email" placeholder="Email *" required
+                                    class="w-full px-3.5 py-2.5 rounded-xl border border-zinc-300 bg-white text-sm focus:outline-none focus:border-tg-green">
+                                <input type="tel" id="wl-mobile" placeholder="Mobile Number *" required
+                                    class="sm:col-span-2 w-full px-3.5 py-2.5 rounded-xl border border-zinc-300 bg-white text-sm focus:outline-none focus:border-tg-green">
+                            </div>
+
+                            <button type="submit" id="wl-submit-btn"
+                                class="w-full py-3 px-4 rounded-xl bg-tg-dark hover:bg-tg-slate text-white font-semibold text-sm transition shadow-sm">
+                                Join Priority Waitlist
+                            </button>
+                        </form>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ========================================================= -->
+        <!-- VIEW 2: ORGANIZER DASHBOARD & CAPACITY CONTROL            -->
+        <!-- ========================================================= -->
+        <section id="view-admin" class="hidden fade-in space-y-6">
+
+            <div class="flex justify-end">
+                <button type="button" onclick="lockDashboard()"
+                    class="px-3.5 py-2 rounded-xl bg-white hover:bg-zinc-100 text-zinc-700 border border-zinc-200 text-xs font-bold transition shadow-sm">
+                    Lock PIN
+                </button>
+            </div>
+            
+            <!-- Top KPI Summary Cards -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+                <div class="bg-white rounded-2xl p-5 border border-zinc-200 shadow-sm">
+                    <p class="text-xs font-bold uppercase tracking-wider text-zinc-400">Confirmed Attendees</p>
+                    <div class="flex items-baseline justify-between mt-2">
+                        <p id="stat-registered" class="text-3xl font-extrabold text-zinc-900">0</p>
+                        <span id="stat-percentage" class="text-xs font-bold text-tg-greenDark bg-tg-green/10 px-2 py-0.5 rounded-md">0%</span>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-2xl p-5 border border-zinc-200 shadow-sm">
+                    <p class="text-xs font-bold uppercase tracking-wider text-zinc-400">Active Capacity Cap</p>
+                    <div class="flex items-baseline justify-between mt-2">
+                        <p id="stat-capacity" class="text-3xl font-extrabold text-tg-greenDark">50</p>
+                        <span class="text-xs text-zinc-400 font-medium">Max Seats</span>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-2xl p-5 border border-zinc-200 shadow-sm">
+                    <p class="text-xs font-bold uppercase tracking-wider text-zinc-400">Remaining Seats</p>
+                    <div class="flex items-baseline justify-between mt-2">
+                        <p id="stat-remaining" class="text-3xl font-extrabold text-zinc-900">50</p>
+                        <span id="stat-status-pill" class="text-xs font-bold text-tg-greenDark bg-tg-green/10 px-2 py-0.5 rounded-md">Open</span>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-2xl p-5 border border-zinc-200 shadow-sm">
+                    <p class="text-xs font-bold uppercase tracking-wider text-zinc-400">Priority Waitlist</p>
+                    <div class="flex items-baseline justify-between mt-2">
+                        <p id="stat-waitlist" class="text-3xl font-extrabold text-amber-600">0</p>
+                        <span class="text-xs text-zinc-400 font-medium">Standby</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Dynamic Capacity Cap Controller -->
+            <div class="bg-tg-dark text-white rounded-2xl p-6 border border-zinc-800 shadow-md">
+                <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-6">
+                    <div class="max-w-xl">
+                        <div class="flex items-center gap-2 mb-1">
+                            <span class="w-2.5 h-2.5 rounded-full bg-tg-green"></span>
+                            <h2 class="text-lg font-bold text-white">Event Capacity Cap Manager</h2>
+                        </div>
+                        <p class="text-sm text-zinc-400">
+                            Initially configured for <strong class="text-white">50 attendees</strong>. Increase the capacity limit at any time—registration automatically reopens when additional seats are added.
+                        </p>
+                    </div>
+
+                    <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-3">
+                        <div class="flex items-center gap-1.5 bg-tg-slate p-1.5 rounded-xl border border-zinc-700">
+                            <span class="text-xs font-semibold text-zinc-400 px-2">Presets:</span>
+                            <button type="button" onclick="applyQuickCap(50)" class="px-3 py-1.5 rounded-lg text-xs font-bold bg-tg-dark hover:bg-tg-green hover:text-white text-zinc-200 border border-zinc-700 transition">50</button>
+                            <button type="button" onclick="applyQuickCap(75)" class="px-3 py-1.5 rounded-lg text-xs font-bold bg-tg-dark hover:bg-tg-green hover:text-white text-zinc-200 border border-zinc-700 transition">75</button>
+                            <button type="button" onclick="applyQuickCap(100)" class="px-3 py-1.5 rounded-lg text-xs font-bold bg-tg-dark hover:bg-tg-green hover:text-white text-zinc-200 border border-zinc-700 transition">100</button>
+                            <button type="button" onclick="applyQuickCap(150)" class="px-3 py-1.5 rounded-lg text-xs font-bold bg-tg-dark hover:bg-tg-green hover:text-white text-zinc-200 border border-zinc-700 transition">150</button>
+                        </div>
+
+                        <form id="capacity-form" class="flex items-center gap-2">
+                            <input type="number" id="new-capacity-input" min="1" max="5000" value="50" required
+                                class="w-24 px-3.5 py-2.5 rounded-xl bg-tg-slate border border-zinc-600 text-white font-bold text-sm focus:outline-none focus:border-tg-green">
+                            <button type="submit"
+                                class="px-4 py-2.5 rounded-xl bg-tg-green hover:bg-tg-greenDark text-white font-bold text-sm transition whitespace-nowrap shadow-sm">
+                                Update Cap
+                            </button>
+                        </form>
+                    </div>
+                </div>
+
+                <!-- Optional Brand Logo Customization Bar -->
+                <div class="mt-5 pt-4 border-t border-zinc-800 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+                    <div class="text-xs text-zinc-400">
+                        <span class="font-semibold text-zinc-200">Brand Logo Customization:</span> Using official TRANSGULF READYMIX vector banner (or upload a custom logo image).
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <input type="file" id="logo-file-input" accept="image/*" class="hidden" onchange="handleLogoUpload(event)">
+                        <button type="button" onclick="document.getElementById('logo-file-input').click()"
+                            class="px-3.5 py-1.5 rounded-xl bg-tg-slate hover:bg-zinc-700 text-zinc-200 border border-zinc-600 text-xs font-semibold transition flex items-center gap-1.5">
+                            <svg class="w-3.5 h-3.5 text-tg-green" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
+                            <span>Upload Custom Logo</span>
+                        </button>
+                        <button type="button" id="reset-logo-btn" onclick="resetCustomLogo()"
+                            class="hidden px-3 py-1.5 rounded-xl bg-red-950/60 hover:bg-red-900/70 text-red-300 border border-red-800/60 text-xs font-semibold transition">
+                            Reset to Official Logo
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Live Attendee Directory & Waitlist Table -->
+            <div class="bg-white rounded-2xl border border-zinc-200 shadow-sm overflow-hidden">
+                <div class="p-5 border-b border-zinc-200 flex flex-col md:flex-row md:items-center justify-between gap-4 bg-zinc-50/70">
+                    <div class="flex items-center gap-2">
+                        <button id="subtab-confirmed" onclick="switchAdminSubtab('confirmed')"
+                            class="px-3.5 py-2 rounded-xl text-sm font-bold bg-tg-dark text-white transition">
+                            Confirmed Attendees (<span id="subtab-confirmed-count">0</span>)
+                        </button>
+                        <button id="subtab-waitlist" onclick="switchAdminSubtab('waitlist')"
+                            class="px-3.5 py-2 rounded-xl text-sm font-bold bg-white text-zinc-600 border border-zinc-200 hover:bg-zinc-100 transition">
+                            Priority Waitlist (<span id="subtab-waitlist-count">0</span>)
+                        </button>
+                    </div>
+
+                    <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-3">
+                        <div class="relative">
+                            <svg class="w-4 h-4 text-zinc-400 absolute left-3.5 top-1/2 -translate-y-1/2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
+                            <input type="text" id="admin-search" placeholder="Search name, company, email..."
+                                class="pl-10 pr-4 py-2 rounded-xl border border-zinc-300 text-sm w-full sm:w-64 focus:outline-none focus:border-tg-green">
+                        </div>
+
+                        <button onclick="exportToCSV()"
+                            class="px-4 py-2 rounded-xl bg-tg-green hover:bg-tg-greenDark text-white font-semibold text-sm transition flex items-center justify-center gap-2 shadow-sm">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path></svg>
+                            <span>Export to CSV</span>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="overflow-x-auto">
+                    <table class="w-full text-left border-collapse">
+                        <thead>
+                            <tr class="bg-zinc-100 border-b border-zinc-200 text-[11px] font-bold uppercase tracking-wider text-zinc-500">
+                                <th class="py-3.5 px-5">Pass ID / #</th>
+                                <th class="py-3.5 px-5">Person Name</th>
+                                <th class="py-3.5 px-5">Company &amp; Position</th>
+                                <th class="py-3.5 px-5">Contact Info</th>
+                                <th class="py-3.5 px-5">Registered</th>
+                                <th class="py-3.5 px-5 text-right">Action</th>
+                            </tr>
+                        </thead>
+                        <tbody id="attendee-table-body" class="divide-y divide-zinc-200 text-sm"></tbody>
+                    </table>
+                </div>
+
+                <div id="empty-table-state" class="py-12 px-4 text-center">
+                    <div class="w-12 h-12 rounded-full bg-zinc-100 text-zinc-400 flex items-center justify-center mx-auto mb-3">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+                    </div>
+                    <p id="empty-state-title" class="text-sm font-bold text-zinc-700">No attendees registered yet</p>
+                    <p id="empty-state-desc" class="text-xs text-zinc-500 mt-1">All customer submissions are sent to Formspree and displayed here on this browser.</p>
+                </div>
+            </div>
+
+        </section>
+    </main>
+
+    <!-- Brand Footer -->
+    <footer class="bg-tg-dark text-zinc-400 border-t border-zinc-800 py-5 mt-12">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row justify-between items-center gap-2 text-xs">
+            <p class="font-semibold text-zinc-300">TRANSGULF READYMIX &bull; <span class="text-tg-green">ENGINEERED FOR YOU</span></p>
+            <p>Concrete Technical Seminar Registration Portal &bull; Formspree Connected</p>
+        </div>
+    </footer>
+
+    <!-- ========================================================= -->
+    <!-- FORMSPREE & APPLICATION LOGIC                             -->
+    <!-- ========================================================= -->
+    <script>
+        const FORMSPREE_ENDPOINT = 'https://formspree.io/f/mvkadpyz';
+        const ORGANIZER_PIN = '1986';
+
+        const STORAGE_KEYS = {
+            capacity: 'tgr_event_capacity_v2',
+            logo: 'tgr_event_logo_v2',
+            attendees: 'tgr_event_attendees_v2',
+            waitlist: 'tgr_event_waitlist_v2',
+            unlocked: 'tgr_organizer_unlocked_v2'
+        };
+
+        let state = {
+            capacity: 50,
+            customLogoUrl: '',
+            attendees: [],
+            waitlist: [],
+            currentView: 'register',
+            adminSubtab: 'confirmed',
+            searchQuery: '',
+            latestRegistration: null,
+            organizerUnlocked: false
+        };
+
+        function loadSavedState() {
+            const savedCap = parseInt(localStorage.getItem(STORAGE_KEYS.capacity), 10);
+            if (Number.isFinite(savedCap) && savedCap >= 1) {
+                state.capacity = savedCap;
+            }
+            state.customLogoUrl = localStorage.getItem(STORAGE_KEYS.logo) || '';
+            try {
+                const att = JSON.parse(localStorage.getItem(STORAGE_KEYS.attendees) || '[]');
+                state.attendees = Array.isArray(att) ? att : [];
+            } catch {
+                state.attendees = [];
+            }
+            try {
+                const wl = JSON.parse(localStorage.getItem(STORAGE_KEYS.waitlist) || '[]');
+                state.waitlist = Array.isArray(wl) ? wl : [];
+            } catch {
+                state.waitlist = [];
+            }
+            state.organizerUnlocked = sessionStorage.getItem(STORAGE_KEYS.unlocked) === 'true';
+        }
+
+        function persistState() {
+            localStorage.setItem(STORAGE_KEYS.capacity, String(state.capacity));
+            localStorage.setItem(STORAGE_KEYS.logo, state.customLogoUrl || '');
+            localStorage.setItem(STORAGE_KEYS.attendees, JSON.stringify(state.attendees));
+            localStorage.setItem(STORAGE_KEYS.waitlist, JSON.stringify(state.waitlist));
+        }
+
+        function applyBrandLogoUI(logoUrl) {
+            state.customLogoUrl = logoUrl || '';
+            const headerImg = document.getElementById('header-custom-logo');
+            const headerSvg = document.getElementById('header-default-svg');
+            const passImg = document.getElementById('pass-custom-logo');
+            const passSvg = document.getElementById('pass-default-svg');
+            const resetBtn = document.getElementById('reset-logo-btn');
+
+            if (state.customLogoUrl) {
+                headerImg.src = state.customLogoUrl;
+                headerImg.classList.remove('hidden');
+                headerSvg.classList.add('hidden');
+
+                passImg.src = state.customLogoUrl;
+                passImg.classList.remove('hidden');
+                passSvg.classList.add('hidden');
+
+                if (resetBtn) resetBtn.classList.remove('hidden');
+            } else {
+                headerImg.src = '';
+                headerImg.classList.add('hidden');
+                headerSvg.classList.remove('hidden');
+
+                passImg.src = '';
+                passImg.classList.add('hidden');
+                passSvg.classList.remove('hidden');
+
+                if (resetBtn) resetBtn.classList.add('hidden');
+            }
+        }
+
+        window.handleLogoUpload = function(event) {
+            const file = event.target.files && event.target.files[0];
+            if (!file) return;
+
+            const reader = new FileReader();
+            reader.onload = function(e) {
+                const img = new Image();
+                img.onload = function() {
+                    const maxHeight = 140;
+                    const scale = Math.min(1, maxHeight / img.height);
+                    const canvas = document.createElement('canvas');
+                    canvas.width = Math.round(img.width * scale);
+                    canvas.height = Math.round(img.height * scale);
+                    const ctx = canvas.getContext('2d');
+                    ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
+
+                    const compressedDataUrl = canvas.toDataURL('image/png', 0.9);
+                    applyBrandLogoUI(compressedDataUrl);
+                    persistState();
+                    showToast('Custom logo updated across portal!', 'success');
+                };
+                img.src = e.target.result;
+            };
+            reader.readAsDataURL(file);
+            event.target.value = '';
+        };
+
+        window.resetCustomLogo = function() {
+            applyBrandLogoUI('');
+            persistState();
+            showToast('Restored official TRANSGULF READYMIX logo.', 'success');
+        };
+
+        // =========================================================
+        // PIN PROTECTION & VIEW NAVIGATION
+        // =========================================================
+        window.switchView = function(view) {
+            if (view === 'admin' && !state.organizerUnlocked) {
+                openPinModal();
+                return;
+            }
+            state.currentView = view;
+            const regSection = document.getElementById('view-register');
+            const adminSection = document.getElementById('view-admin');
+            const tabReg = document.getElementById('tab-register');
+            const tabAdmin = document.getElementById('tab-admin');
+
+            if (view === 'register') {
+                regSection.classList.remove('hidden');
+                adminSection.classList.add('hidden');
+                tabReg.className = 'flex-1 sm:flex-none px-4 py-2 rounded-lg text-sm font-semibold transition-all duration-200 bg-tg-green text-white shadow-sm';
+                tabAdmin.className = 'flex-1 sm:flex-none px-4 py-2 rounded-lg text-sm font-semibold transition-all duration-200 text-zinc-600 hover:text-zinc-900 flex items-center justify-center gap-2';
+            } else {
+                regSection.classList.add('hidden');
+                adminSection.classList.remove('hidden');
+                tabAdmin.className = 'flex-1 sm:flex-none px-4 py-2 rounded-lg text-sm font-semibold transition-all duration-200 bg-tg-green text-white shadow-sm flex items-center justify-center gap-2';
+                tabReg.className = 'flex-1 sm:flex-none px-4 py-2 rounded-lg text-sm font-semibold transition-all duration-200 text-zinc-600 hover:text-zinc-900';
+            }
+            renderAll();
+        };
+
+        function openPinModal() {
+            const modal = document.getElementById('pin-modal');
+            const input = document.getElementById('organizer-pin-input');
+            document.getElementById('pin-error-msg').classList.add('hidden');
+            input.value = '';
+            modal.classList.remove('hidden');
+            modal.classList.add('flex');
+            setTimeout(() => input.focus(), 50);
+        }
+
+        window.closePinModal = function() {
+            const modal = document.getElementById('pin-modal');
+            modal.classList.add('hidden');
+            modal.classList.remove('flex');
+        };
+
+        window.lockDashboard = function() {
+            state.organizerUnlocked = false;
+            sessionStorage.removeItem(STORAGE_KEYS.unlocked);
+            switchView('register');
+            showToast('Organizer Dashboard locked.', 'success');
+        };
+
+        document.getElementById('pin-form').addEventListener('submit', (e) => {
+            e.preventDefault();
+            const entered = document.getElementById('organizer-pin-input').value.trim();
+            if (entered === ORGANIZER_PIN) {
+                state.organizerUnlocked = true;
+                sessionStorage.setItem(STORAGE_KEYS.unlocked, 'true');
+                closePinModal();
+                switchView('admin');
+                showToast('Organizer Dashboard unlocked.', 'success');
+            } else {
+                document.getElementById('pin-error-msg').classList.remove('hidden');
+            }
+        });
+
+        window.switchAdminSubtab = function(subtab) {
+            state.adminSubtab = subtab;
+            const btnConf = document.getElementById('subtab-confirmed');
+            const btnWait = document.getElementById('subtab-waitlist');
+
+            if (subtab === 'confirmed') {
+                btnConf.className = 'px-3.5 py-2 rounded-xl text-sm font-bold bg-tg-dark text-white transition';
+                btnWait.className = 'px-3.5 py-2 rounded-xl text-sm font-bold bg-white text-zinc-600 border border-zinc-200 hover:bg-zinc-100 transition';
+            } else {
+                btnWait.className = 'px-3.5 py-2 rounded-xl text-sm font-bold bg-tg-dark text-white transition';
+                btnConf.className = 'px-3.5 py-2 rounded-xl text-sm font-bold bg-white text-zinc-600 border border-zinc-200 hover:bg-zinc-100 transition';
+            }
+            renderTable();
+        };
+
+        // =========================================================
+        // COPY SHARE LINK, INVITATION MESSAGE & TOAST HELPER
+        // =========================================================
+        function copyTextToClipboard(text, successMsg) {
+            if (navigator.clipboard && navigator.clipboard.writeText) {
+                navigator.clipboard.writeText(text)
+                    .then(() => showToast(successMsg, 'success'))
+                    .catch(() => fallbackCopy(text, successMsg));
+            } else {
+                fallbackCopy(text, successMsg);
+            }
+        }
+
+        function fallbackCopy(text, successMsg) {
+            const tempArea = document.createElement('textarea');
+            tempArea.value = text;
+            tempArea.style.position = 'fixed';
+            tempArea.style.left = '-9999px';
+            document.body.appendChild(tempArea);
+            tempArea.select();
+            tempArea.setSelectionRange(0, 99999);
+            try {
+                document.execCommand('copy');
+                showToast(successMsg, 'success');
+            } catch {
+                showToast('Unable to copy automatically. Please copy manually.', 'error');
+            } finally {
+                document.body.removeChild(tempArea);
+            }
+        }
+
+        window.copyShareLink = function() {
+            copyTextToClipboard(window.location.href, 'Invitation link copied to clipboard!');
+        };
+
+        window.copyInvitationMessage = function() {
+            const url = window.location.href;
+            const inviteText = [
+                'Dear Valued Partner,',
+                '',
+                'TRANSGULF READYMIX cordially invites you to our Concrete Technical Seminar.',
+                '• Date: Saturday, December 5, 2026',
+                '• Time: 8:00 AM – 5:00 PM',
+                '• Venue: Courtyard by Marriott Riyadh Diplomatic Quarter (Assafeer Hall)',
+                '',
+                `Seats are strictly limited to ${state.capacity} attendees. Please reserve your seat and generate your instant Digital VIP Pass via our official registration link:`,
+                url,
+                '',
+                'Best regards,',
+                'TRANSGULF READYMIX | ENGINEERED FOR YOU'
+            ].join('\n');
+            copyTextToClipboard(inviteText, 'WhatsApp / Email invitation message copied!');
+        };
+
+        // =========================================================
+        // ATTENDEE REGISTRATION FORM SUBMISSION & VALIDATION
+        // =========================================================
+        function normalizePhone(phone) {
+            return String(phone || '').replace(/[\s\-().+]/g, '');
+        }
+
+        async function postToFormspree(payload) {
+            const response = await fetch(FORMSPREE_ENDPOINT, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Accept': 'application/json'
+                },
+                body: JSON.stringify(payload)
+            });
+            if (!response.ok) {
+                throw new Error(`Formspree error: ${response.status}`);
+            }
+        }
+
+        document.getElementById('registration-form').addEventListener('submit', async (e) => {
+            e.preventDefault();
+
+            ['fullName', 'company', 'position', 'email', 'mobile'].forEach(f => {
+                document.getElementById(`error-${f}`).classList.add('hidden');
+                document.getElementById(f).classList.remove('border-red-500');
+            });
+            document.getElementById('form-alert').classList.add('hidden');
+
+            if (state.attendees.length >= state.capacity) {
+                showFormAlert(`Registration capacity (${state.capacity} seats) has been reached.`);
+                renderAll();
+                return;
+            }
+
+            const fullName = document.getElementById('fullName').value.trim();
+            const company = document.getElementById('company').value.trim();
+            const position = document.getElementById('position').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const mobile = document.getElementById('mobile').value.trim();
+
+            let isValid = true;
+            if (!fullName) {
+                showFieldError('fullName', 'Please enter the attendee’s full name.');
+                isValid = false;
+            }
+            if (!company) {
+                showFieldError('company', 'Please enter the company or organization name.');
+                isValid = false;
+            }
+            if (!position) {
+                showFieldError('position', 'Please enter the attendee’s job title or position.');
+                isValid = false;
+            }
+            const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!email || !emailPattern.test(email)) {
+                showFieldError('email', 'Please enter a valid email address.');
+                isValid = false;
+            }
+            const digitsOnly = normalizePhone(mobile);
+            if (!mobile || digitsOnly.length < 7) {
+                showFieldError('mobile', 'Please enter a valid mobile number (at least 7 digits).');
+                isValid = false;
+            }
+
+            if (!isValid) return;
+
+            const isDuplicate = state.attendees.some(att =>
+                (att.email || '').toLowerCase() === email.toLowerCase() ||
+                normalizePhone(att.mobile) === digitsOnly
+            );
+            if (isDuplicate) {
+                showFormAlert('This email address or mobile number is already registered for the event.');
+                return;
+            }
+
+            const submitBtn = document.getElementById('submit-btn');
+            submitBtn.disabled = true;
+            submitBtn.innerHTML = '<span>Reserving Seat...</span>';
+
+            const nextNumber = 1001 + state.attendees.length;
+            const createdAt = new Date().toLocaleString([], { dateStyle: 'medium', timeStyle: 'short' });
+            const newRecord = {
+                id: crypto.randomUUID ? crypto.randomUUID() : String(Date.now()),
+                passId: `TGR-${nextNumber}`,
+                fullName,
+                company,
+                position,
+                email,
+                mobile,
+                createdAt,
+                createdAtMs: Date.now()
+            };
+
+            try {
+                await postToFormspree({
+                    'Status': 'Confirmed Attendee',
+                    'Pass ID': newRecord.passId,
+                    'Person Name': fullName,
+                    'Company': company,
+                    'Position': position,
+                    'Email': email,
+                    'Mobile Number': mobile,
+                    'Registered At': createdAt
+                });
+
+                state.attendees.push(newRecord);
+                persistState();
+                state.latestRegistration = newRecord;
+                displayDigitalPass(newRecord);
+                document.getElementById('registration-form').reset();
+                showToast(`Seat confirmed for ${fullName}!`, 'success');
+                renderAll();
+            } catch (err) {
+                console.error('Registration submission error:', err);
+                showFormAlert('Unable to submit registration right now. Please check your internet connection and try again.');
+            } finally {
+                submitBtn.disabled = false;
+                submitBtn.innerHTML = `
+                    <span>Confirm Registration &amp; Generate VIP Pass</span>
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                `;
+            }
+        });
+
+        function showFieldError(field, msg) {
+            const errEl = document.getElementById(`error-${field}`);
+            const inputEl = document.getElementById(field);
+            errEl.textContent = msg;
+            errEl.classList.remove('hidden');
+            inputEl.classList.add('border-red-500');
+        }
+
+        function showFormAlert(msg) {
+            const alertBox = document.getElementById('form-alert');
+            document.getElementById('form-alert-text').textContent = msg;
+            alertBox.classList.remove('hidden');
+        }
+
+        // =========================================================
+        // DIGITAL VIP PASS DISPLAY, DOWNLOAD & RESET
+        // =========================================================
+        function displayDigitalPass(record) {
+            document.getElementById('badge-id').textContent = record.passId;
+            document.getElementById('badge-name').textContent = record.fullName;
+            document.getElementById('badge-company').textContent = record.company;
+            document.getElementById('badge-position').textContent = record.position;
+            document.getElementById('badge-email').textContent = record.email;
+            document.getElementById('badge-mobile').textContent = record.mobile;
+        }
+
+        window.resetToForm = function() {
+            state.latestRegistration = null;
+            renderAll();
+        };
+
+        window.downloadBadgeFile = function() {
+            const rec = state.latestRegistration;
+            if (!rec) return;
+            const content = [
+                '======================================================',
+                '        TRANSGULF READYMIX - ENGINEERED FOR YOU       ',
+                '              CONCRETE TECHNICAL SEMINAR              ',
+                '======================================================',
+                `VIP PASS ID  : ${rec.passId}`,
+                `ATTENDEE     : ${rec.fullName}`,
+                `COMPANY      : ${rec.company}`,
+                `POSITION     : ${rec.position}`,
+                `EMAIL        : ${rec.email}`,
+                `MOBILE       : ${rec.mobile}`,
+                'DATE & TIME  : Saturday, December 5, 2026 | 8:00 AM – 5:00 PM',
+                'VENUE        : Courtyard by Marriott Riyadh Diplomatic Quarter (Assafeer Hall)',
+                `CONFIRMED ON : ${rec.createdAt}`,
+                '======================================================'
+            ].join('\n');
+
+            const blob = new Blob([content], { type: 'text/plain;charset=utf-8' });
+            const url = URL.createObjectURL(blob);
+            const link = document.createElement('a');
+            link.href = url;
+            link.download = `${rec.passId}_${rec.fullName.replace(/\s+/g, '_')}.txt`;
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+            URL.revokeObjectURL(url);
+            showToast('VIP Pass downloaded!', 'success');
+        };
+
+        // =========================================================
+        // PRIORITY WAITLIST SUBMISSION
+        // =========================================================
+        document.getElementById('waitlist-form').addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const fullName = document.getElementById('wl-name').value.trim();
+            const company = document.getElementById('wl-company').value.trim();
+            const position = document.getElementById('wl-position').value.trim();
+            const email = document.getElementById('wl-email').value.trim();
+            const mobile = document.getElementById('wl-mobile').value.trim();
+
+            if (!fullName || !company || !position || !email || !mobile) {
+                showToast('Please complete all waitlist fields.', 'error');
+                return;
+            }
+
+            const btn = document.getElementById('wl-submit-btn');
+            btn.disabled = true;
+            btn.textContent = 'Submitting to Waitlist...';
+
+            const createdAt = new Date().toLocaleString([], { dateStyle: 'medium', timeStyle: 'short' });
+            const wlRecord = {
+                id: crypto.randomUUID ? crypto.randomUUID() : String(Date.now()),
+                passId: `WL-${101 + state.waitlist.length}`,
+                fullName,
+                company,
+                position,
+                email,
+                mobile,
+                createdAt,
+                createdAtMs: Date.now()
+            };
+
+            try {
+                await postToFormspree({
+                    'Status': 'Priority Waitlist',
+                    'Pass ID': wlRecord.passId,
+                    'Person Name': fullName,
+                    'Company': company,
+                    'Position': position,
+                    'Email': email,
+                    'Mobile Number': mobile,
+                    'Registered At': createdAt
+                });
+
+                state.waitlist.push(wlRecord);
+                persistState();
+                document.getElementById('waitlist-form').reset();
+                showToast('Added to Priority Waitlist! We will contact you if seats open.', 'success');
+                renderAll();
+            } catch (err) {
+                console.error('Waitlist error:', err);
+                showToast('Unable to join waitlist right now.', 'error');
+            } finally {
+                btn.disabled = false;
+                btn.textContent = 'Join Priority Waitlist';
+            }
+        });
+
+        // =========================================================
+        // ORGANIZER CAPACITY CAP UPDATES, SEARCH & CSV EXPORT
+        // =========================================================
+        window.applyQuickCap = function(newCap) {
+            document.getElementById('new-capacity-input').value = newCap;
+            saveNewCapacity(newCap);
+        };
+
+        document.getElementById('capacity-form').addEventListener('submit', (e) => {
+            e.preventDefault();
+            const val = parseInt(document.getElementById('new-capacity-input').value, 10);
+            if (isNaN(val) || val < 1) {
+                showToast('Please enter a valid capacity number (minimum 1).', 'error');
+                return;
+            }
+            saveNewCapacity(val);
+        });
+
+        function saveNewCapacity(newCap) {
+            state.capacity = newCap;
+            persistState();
+            renderAll();
+            showToast(`Event capacity updated to ${newCap} seats!`, 'success');
+        }
+
+        document.getElementById('admin-search').addEventListener('input', (e) => {
+            state.searchQuery = e.target.value.trim().toLowerCase();
+            renderTable();
+        });
+
+        window.removeRecord = function(docId, personName, listType) {
+            const modal = document.getElementById('confirm-modal');
+            document.getElementById('modal-title').textContent = 'Remove Registration';
+            document.getElementById('modal-message').textContent = `Are you sure you want to remove ${personName} from the ${listType === 'confirmed' ? 'Confirmed Attendees' : 'Priority Waitlist'}? This will free up their seat.`;
+            modal.classList.remove('hidden');
+            modal.classList.add('flex');
+
+            const cancelBtn = document.getElementById('modal-cancel-btn');
+            const confirmBtn = document.getElementById('modal-confirm-btn');
+
+            const closeModal = () => {
+                modal.classList.add('hidden');
+                modal.classList.remove('flex');
+            };
+
+            cancelBtn.onclick = closeModal;
+            confirmBtn.onclick = () => {
+                closeModal();
+                if (listType === 'confirmed') {
+                    state.attendees = state.attendees.filter(a => a.id !== docId);
+                } else {
+                    state.waitlist = state.waitlist.filter(w => w.id !== docId);
+                }
+                persistState();
+                renderAll();
+                showToast(`Removed ${personName}.`, 'success');
+            };
+        };
+
+        window.exportToCSV = function() {
+            const isConfirmed = state.adminSubtab === 'confirmed';
+            const dataList = isConfirmed ? state.attendees : state.waitlist;
+            if (dataList.length === 0) {
+                showToast('No records available to export.', 'error');
+                return;
+            }
+
+            const headers = ['Pass ID', 'Person Name', 'Company', 'Position', 'Email', 'Mobile Number', 'Registered At'];
+            const rows = dataList.map(r => [
+                r.passId || '',
+                r.fullName || '',
+                r.company || '',
+                r.position || '',
+                r.email || '',
+                r.mobile || '',
+                r.createdAt || ''
+            ].map(val => `"${String(val).replace(/"/g, '""')}"`).join(','));
+
+            const csvContent = '\uFEFF' + [headers.join(','), ...rows].join('\n');
+            const blob = new Blob([csvContent], { type: 'text/csv;charset=utf-8;' });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = `Transgulf_Readymix_${isConfirmed ? 'Attendees' : 'Waitlist'}_${new Date().toISOString().slice(0, 10)}.csv`;
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+            URL.revokeObjectURL(url);
+            showToast(`Exported ${dataList.length} records to CSV!`, 'success');
+        };
+
+        // =========================================================
+        // TOAST NOTIFICATION HELPER
+        // =========================================================
+        function showToast(message, type = 'success') {
+            const container = document.getElementById('toast-container');
+            const toast = document.createElement('div');
+            const bgClass = type === 'success' ? 'bg-tg-dark border-tg-green text-white' : 'bg-red-900 border-red-500 text-white';
+            const iconColor = type === 'success' ? 'text-tg-green' : 'text-red-300';
+
+            toast.className = `pointer-events-auto flex items-center gap-3 px-4 py-3 rounded-xl border shadow-xl text-sm font-medium fade-in ${bgClass}`;
+            toast.innerHTML = `
+                <svg class="w-5 h-5 shrink-0 ${iconColor}" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    ${type === 'success'
+                        ? '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>'
+                        : '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>'}
+                </svg>
+                <span>${message}</span>
+            `;
+            container.appendChild(toast);
+            setTimeout(() => {
+                toast.style.opacity = '0';
+                toast.style.transition = 'opacity 0.25s ease';
+                setTimeout(() => toast.remove(), 250);
+            }, 3400);
+        }
+
+        // =========================================================
+        // MASTER UI RENDERER
+        // =========================================================
+        function renderAll() {
+            const count = state.attendees.length;
+            const cap = state.capacity;
+            const remaining = Math.max(0, cap - count);
+            const isFull = count >= cap;
+            const pct = cap > 0 ? Math.min(100, Math.round((count / cap) * 100)) : 100;
+
+            document.getElementById('nav-badge-count').textContent = `${count}/${cap}`;
+            document.getElementById('new-capacity-input').value = cap;
+
+            const statusDot = document.getElementById('hero-status-dot');
+            const statusLabel = document.getElementById('hero-status-label');
+            if (isFull) {
+                statusDot.classList.remove('bg-tg-green');
+                statusDot.classList.add('bg-amber-400');
+                statusLabel.textContent = 'Capacity Reached • Waitlist Open';
+            } else {
+                statusDot.classList.remove('bg-amber-400');
+                statusDot.classList.add('bg-tg-green');
+                statusLabel.textContent = 'Official Partner Invitation';
+            }
+
+            const formCard = document.getElementById('registration-form-card');
+            const passCard = document.getElementById('confirmation-card');
+            const fullCard = document.getElementById('capacity-full-card');
+            document.getElementById('full-cap-number').textContent = cap;
+
+            if (state.latestRegistration) {
+                formCard.classList.add('hidden');
+                fullCard.classList.add('hidden');
+                passCard.classList.remove('hidden');
+                document.getElementById('register-another-btn').textContent = isFull ? 'View Status' : 'Register Another';
+            } else if (isFull) {
+                formCard.classList.add('hidden');
+                passCard.classList.add('hidden');
+                fullCard.classList.remove('hidden');
+            } else {
+                fullCard.classList.add('hidden');
+                passCard.classList.add('hidden');
+                formCard.classList.remove('hidden');
+            }
+
+            document.getElementById('stat-registered').textContent = count;
+            document.getElementById('stat-percentage').textContent = `${pct}%`;
+            document.getElementById('stat-capacity').textContent = cap;
+            document.getElementById('stat-remaining').textContent = remaining;
+            document.getElementById('stat-waitlist').textContent = state.waitlist.length;
+
+            const statusPill = document.getElementById('stat-status-pill');
+            if (isFull) {
+                statusPill.textContent = 'Full';
+                statusPill.className = 'text-xs font-bold text-amber-700 bg-amber-100 px-2 py-0.5 rounded-md';
+            } else {
+                statusPill.textContent = 'Open';
+                statusPill.className = 'text-xs font-bold text-tg-greenDark bg-tg-green/10 px-2 py-0.5 rounded-md';
+            }
+
+            document.getElementById('subtab-confirmed-count').textContent = count;
+            document.getElementById('subtab-waitlist-count').textContent = state.waitlist.length;
+
+            renderTable();
+        }
+
+        function renderTable() {
+            const tbody = document.getElementById('attendee-table-body');
+            const emptyState = document.getElementById('empty-table-state');
+            const isConfirmedTab = state.adminSubtab === 'confirmed';
+            const rawList = isConfirmedTab ? state.attendees : state.waitlist;
+
+            const filtered = rawList.filter(item => {
+                if (!state.searchQuery) return true;
+                const q = state.searchQuery;
+                return (
+                    (item.fullName || '').toLowerCase().includes(q) ||
+                    (item.company || '').toLowerCase().includes(q) ||
+                    (item.position || '').toLowerCase().includes(q) ||
+                    (item.email || '').toLowerCase().includes(q) ||
+                    (item.mobile || '').toLowerCase().includes(q) ||
+                    (item.passId || '').toLowerCase().includes(q)
+                );
+            });
+
+            if (filtered.length === 0) {
+                tbody.innerHTML = '';
+                emptyState.classList.remove('hidden');
+                document.getElementById('empty-state-title').textContent = state.searchQuery
+                    ? 'No matching records found'
+                    : (isConfirmedTab ? 'No attendees registered on this browser yet' : 'No entries in Priority Waitlist');
+                document.getElementById('empty-state-desc').textContent = state.searchQuery
+                    ? 'Try adjusting your search keywords.'
+                    : 'All submissions are delivered to your Formspree dashboard and email.';
+                return;
+            }
+
+            emptyState.classList.add('hidden');
+            tbody.innerHTML = filtered.map((item, idx) => `
+                <tr class="hover:bg-zinc-50 transition">
+                    <td class="py-3.5 px-5 whitespace-nowrap">
+                        <span class="inline-flex items-center px-2.5 py-1 rounded-md text-xs font-mono font-bold ${isConfirmedTab ? 'bg-tg-green/10 text-tg-greenDark border border-tg-green/30' : 'bg-amber-100 text-amber-800'}">
+                            ${escapeHTML(item.passId || `#${idx + 1}`)}
+                        </span>
+                    </td>
+                    <td class="py-3.5 px-5 font-bold text-zinc-900">${escapeHTML(item.fullName)}</td>
+                    <td class="py-3.5 px-5">
+                        <div class="font-semibold text-zinc-800">${escapeHTML(item.company)}</div>
+                        <div class="text-xs text-zinc-500">${escapeHTML(item.position)}</div>
+                    </td>
+                    <td class="py-3.5 px-5">
+                        <div class="text-zinc-800">${escapeHTML(item.email)}</div>
+                        <div class="text-xs text-zinc-500 font-mono">${escapeHTML(item.mobile)}</div>
+                    </td>
+                    <td class="py-3.5 px-5 text-xs text-zinc-500 whitespace-nowrap">${escapeHTML(item.createdAt || '')}</td>
+                    <td class="py-3.5 px-5 text-right whitespace-nowrap">
+                        <button onclick="removeRecord('${item.id}', '${escapeHTML(item.fullName).replace(/'/g, "\\'")}', '${isConfirmedTab ? 'confirmed' : 'waitlist'}')"
+                            class="px-3 py-1.5 rounded-lg text-xs font-semibold text-red-600 hover:bg-red-50 border border-transparent hover:border-red-200 transition">
+                            Remove
+                        </button>
+                    </td>
+                </tr>
+            `).join('');
+        }
+
+        function escapeHTML(str) {
+            return String(str)
+                .replace(/&/g, '&amp;')
+                .replace(/</g, '&lt;')
+                .replace(/>/g, '&gt;')
+                .replace(/"/g, '&quot;');
+        }
+
+        window.addEventListener('DOMContentLoaded', () => {
+            loadSavedState();
+            applyBrandLogoUI(state.customLogoUrl);
+            renderAll();
+        });
+    </script>
+</body>
+</html>
