@@ -55,6 +55,24 @@
             from { opacity: 0; transform: translateY(6px); }
             to { opacity: 1; transform: translateY(0); }
         }
+        @media print {
+            body * {
+                visibility: hidden;
+            }
+            #vip-pass-card, #vip-pass-card * {
+                visibility: visible;
+            }
+            #vip-pass-card {
+                position: fixed;
+                left: 50%;
+                top: 10%;
+                transform: translateX(-50%);
+                width: 92%;
+                max-width: 520px;
+                box-shadow: none !important;
+                border: 2px solid #3f9c35 !important;
+            }
+        }
     </style>
 </head>
 <body class="bg-zinc-100 text-zinc-900 font-sans antialiased min-h-screen flex flex-col selection:bg-tg-green selection:text-white">
@@ -176,7 +194,7 @@
                 <h3 class="text-lg font-bold text-zinc-900">Organizer PIN Required</h3>
                 <button type="button" onclick="closePinModal()" class="text-zinc-400 hover:text-zinc-700 font-bold text-lg leading-none">&times;</button>
             </div>
-            <p class="text-xs text-zinc-500 mb-4">Enter your Organizer PIN to review the registered list, manage capacity, or export CSV.</p>
+            <p class="text-xs text-zinc-500 mb-4">Enter your Organizer PIN to review the registered list, send passes, manage capacity, or export CSV.</p>
             <form id="pin-form" class="space-y-4">
                 <input type="password" id="organizer-pin-input" inputmode="numeric" maxlength="8" placeholder="Enter PIN" required
                     class="w-full px-4 py-3 rounded-xl border border-zinc-300 text-center text-lg font-bold tracking-[0.35em] text-zinc-900 focus:outline-none focus:ring-2 focus:ring-tg-green/25 focus:border-tg-green">
@@ -190,6 +208,127 @@
                     </button>
                 </div>
             </form>
+        </div>
+    </div>
+
+    <!-- VIP Pass Preview & Send Modal -->
+    <div id="pass-modal" class="fixed inset-0 z-50 bg-black/80 backdrop-blur-sm hidden items-center justify-center p-4 overflow-y-auto">
+        <div class="bg-white rounded-2xl max-w-xl w-full p-5 sm:p-6 shadow-2xl border border-zinc-200 fade-in my-auto">
+            <div class="flex items-center justify-between mb-4">
+                <div>
+                    <h3 class="text-lg font-bold text-zinc-900">Digital VIP Pass Preview</h3>
+                    <p id="pass-modal-recipient" class="text-xs text-zinc-500">Recipient: —</p>
+                </div>
+                <button type="button" onclick="closePassModal()" class="text-zinc-400 hover:text-zinc-700 font-bold text-xl leading-none">&times;</button>
+            </div>
+
+            <!-- VIP Pass Card -->
+            <div id="vip-pass-card" class="bg-[#181818] text-white rounded-xl border-2 border-tg-green overflow-hidden mb-5 shadow-lg">
+                <div class="bg-white px-4 py-3 border-b-2 border-tg-green flex items-center justify-between gap-3">
+                    <div class="flex items-center">
+                        <img id="pass-custom-logo" src="" alt="Transgulf Readymix" class="hidden h-11 w-auto max-w-[230px] object-contain" />
+                        <svg id="pass-default-svg" class="h-11 w-auto shrink-0" viewBox="0 0 490 144" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Transgulf Readymix">
+                            <defs>
+                                <linearGradient id="tgArcGradPass" x1="58" y1="88" x2="104" y2="106" gradientUnits="userSpaceOnUse">
+                                    <stop offset="0%" stop-color="#3F9C35"/>
+                                    <stop offset="55%" stop-color="#3F9C35"/>
+                                    <stop offset="92%" stop-color="#9EA4AA"/>
+                                    <stop offset="100%" stop-color="#9EA4AA"/>
+                                </linearGradient>
+                            </defs>
+                            <rect width="490" height="144" rx="4" fill="#FFFFFF"/>
+                            <path d="M12 10 H83 V31 H57 V104 H37 V31 H12 V10 Z" fill="#1E1E1E" stroke="#1E1E1E" stroke-width="2" stroke-linejoin="round"/>
+                            <path d="M14.5 12.5 H80.5 V28.5 H54.5 V101.5 H39.5 V28.5 H14.5 V12.5 Z" fill="#FFFFFF"/>
+                            <path d="M16.5 14.5 H78.5 V26.5 H52.5 V99.5 H41.5 V26.5 H16.5 V14.5 Z" fill="#3F9C35"/>
+                            <path d="M92 12 C58 18 42 44 42 68 C42 97 65 116 98 116 C129 116 146 95 148 63 H78 L93 80 H125 C121 91 110 96 98 96 C75 96 62 84 62 67 C62 49 74 35 95 29 L92 12 Z" fill="#FFFFFF" stroke="#FFFFFF" stroke-width="6" stroke-linejoin="round"/>
+                            <path d="M92 12 C58 18 42 44 42 68 C42 97 65 116 98 116 C129 116 146 95 148 63 H78 L93 80 H125 C121 91 110 96 98 96 C75 96 62 84 62 67 C62 49 74 35 95 29 L92 12 Z" fill="#1E1E1E"/>
+                            <path d="M90.5 14.8 C60 20.5 44.8 45 44.8 68 C44.8 95.2 66.5 113.2 98 113.2 C127 113.2 143.2 93.8 145.1 65.8 H84.2 L94.2 77.2 H128.8 C124.2 91.5 111.5 98.8 98 98.8 C73.2 98.8 59.2 85.5 59.2 67 C59.2 47.5 72.2 33 93.2 27.2 L90.5 14.8 Z" fill="#FFFFFF"/>
+                            <path d="M89.2 17.2 C61.5 22.8 47.2 46 47.2 68 C47.2 93.5 67.8 110.8 98 110.8 C125.2 110.8 140.5 92.8 142.5 68.2 H89.8 L95.4 74.8 H131.8 C126.8 91.8 112.8 101.2 98 101.2 C71.5 101.2 56.8 86.8 56.8 67 C56.8 46.2 70.5 31.2 91.5 25.4 L89.2 17.2 Z" fill="url(#tgArcGradPass)"/>
+                            <g transform="translate(76, 8)">
+                                <path d="M16 14 L23 14 L21 24 L16 24 Z" fill="#FFFFFF" stroke="#1E1E1E" stroke-width="1.8"/>
+                                <path d="M17 23 L1 40 L1 49 L11 49 L21 26 Z" fill="#FFFFFF" stroke="#1E1E1E" stroke-width="1.8"/>
+                                <path d="M21 17 L27 5 L49 12 L59 24 L54 37 L38 35 L23 26 Z" fill="#FFFFFF" stroke="#1E1E1E" stroke-width="2"/>
+                                <path d="M22 3 H33 L35 12 L21 12 Z" fill="#FFFFFF" stroke="#1E1E1E" stroke-width="2"/>
+                                <path d="M35 8 C46 11 53 17 57 24 L53 27 C48 20 41 15 33 13 Z" fill="#3F9C35" stroke="#1E1E1E" stroke-width="1.3"/>
+                                <rect x="57" y="22" width="10" height="16" rx="1.2" fill="#3F9C35" stroke="#1E1E1E" stroke-width="1.8"/>
+                                <path d="M22 25 L36 25 L41 38 L16 38 L19 31 Z" fill="#FFFFFF" stroke="#1E1E1E" stroke-width="1.9"/>
+                                <rect x="14" y="38" width="53" height="5" rx="1.2" fill="#1E1E1E"/>
+                                <circle cx="20" cy="45.5" r="4.6" fill="#1E1E1E"/>
+                                <circle cx="31" cy="45.5" r="4.6" fill="#1E1E1E"/>
+                                <circle cx="48" cy="45.5" r="4.6" fill="#1E1E1E"/>
+                                <circle cx="62" cy="45.5" r="4.6" fill="#1E1E1E"/>
+                            </g>
+                            <text x="164" y="54" fill="#3F9C35" font-family="'Roboto Slab', Georgia, serif" font-weight="800" font-size="43" letter-spacing="1.2">TRANSGULF</text>
+                            <text x="164" y="100" fill="#9EA4AA" font-family="'Roboto Slab', Georgia, serif" font-weight="700" font-size="41" letter-spacing="2.4">READYMIX</text>
+                            <line x1="12" y1="125" x2="234" y2="125" stroke="#3F9C35" stroke-width="3.2"/>
+                            <line x1="12" y1="133" x2="234" y2="133" stroke="#9EA4AA" stroke-width="3.2"/>
+                            <text x="246" y="134" fill="#3F9C35" font-family="'Inter', Arial, sans-serif" font-weight="600" font-size="18.5" letter-spacing="1.8">ENGINEERED FOR YOU</text>
+                        </svg>
+                    </div>
+                    <span class="text-[11px] font-extrabold uppercase tracking-widest px-3 py-1.5 rounded bg-[#181818] text-white shrink-0">
+                        VIP PASS
+                    </span>
+                </div>
+
+                <div class="p-5 sm:p-6">
+                    <div class="flex justify-between items-start border-b border-zinc-700/80 pb-4 mb-4 gap-4">
+                        <div>
+                            <p class="text-xs text-zinc-300 font-medium">Mastering Job-Site Concrete Practice • Dec 5, 2026</p>
+                            <p id="pass-card-id" class="text-2xl sm:text-3xl font-mono font-extrabold text-white mt-1">TGR-1001</p>
+                        </div>
+                        <div class="bg-white p-2 rounded-lg shrink-0" title="Entry Verification QR Code">
+                            <svg class="w-14 h-14 text-[#181818]" viewBox="0 0 36 36" fill="currentColor">
+                                <path d="M2 2h10v10H2V2zm2 2v6h6V4H4zm2 2h2v2H6V6zm18-4h10v10H24V2zm2 2v6h6V4h-6zm2 2h2v2h-2V6zM2 24h10v10H2V24zm2 2v6h6v-6H4zm2 2h2v2H6v-2zm10-24h2v4h-2V4zm4 2h2v4h-2V6zm-6 6h4v2h-4v-2zm6 2h4v2h-4v-2zm-14 4h4v2H6v-2zm6 0h6v2h-6v-2zm8 0h2v4h-2v-4zm4 2h4v2h-4v-2zm-16 4h2v4h-2v-4zm4 2h4v2h-4v-2zm6-2h4v4h-4v-4zm6 4h4v2h-4v-2zm-10 4h6v2h-6v-2zm8 2h2v4h-2v-4zm4 0h4v4h-4v-4z"/>
+                            </svg>
+                        </div>
+                    </div>
+
+                    <div class="space-y-4">
+                        <div>
+                            <p class="text-[10px] uppercase tracking-wider text-zinc-400 font-semibold">ATTENDEE NAME</p>
+                            <p id="pass-card-name" class="text-lg font-extrabold text-white mt-0.5">—</p>
+                        </div>
+
+                        <div class="grid grid-cols-2 gap-4 border-b border-zinc-700/80 pb-4">
+                            <div>
+                                <p class="text-[10px] uppercase tracking-wider text-zinc-400 font-semibold">COMPANY</p>
+                                <p id="pass-card-company" class="text-sm font-bold text-white mt-0.5">—</p>
+                            </div>
+                            <div>
+                                <p class="text-[10px] uppercase tracking-wider text-zinc-400 font-semibold">POSITION</p>
+                                <p id="pass-card-position" class="text-sm font-bold text-tg-greenLight mt-0.5">—</p>
+                            </div>
+                        </div>
+
+                        <div id="pass-card-project-row" class="hidden border-b border-zinc-700/80 pb-3">
+                            <p class="text-[10px] uppercase tracking-wider text-zinc-400 font-semibold">PROJECT NAME</p>
+                            <p id="pass-card-project" class="text-xs font-semibold text-zinc-200 mt-0.5">—</p>
+                        </div>
+
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-1">
+                            <div>
+                                <p class="text-[11px] text-zinc-400">Email</p>
+                                <p id="pass-card-email" class="text-xs font-semibold text-zinc-100 truncate mt-0.5">—</p>
+                            </div>
+                            <div>
+                                <p class="text-[11px] text-zinc-400">Mobile Number</p>
+                                <p id="pass-card-mobile" class="text-xs font-semibold text-zinc-100 mt-0.5">—</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flex flex-col sm:flex-row justify-end gap-2.5">
+                <button type="button" onclick="window.print()"
+                    class="px-4 py-2.5 rounded-xl border border-zinc-300 hover:bg-zinc-50 text-zinc-800 text-xs font-bold transition">
+                    Print / Save PDF
+                </button>
+                <button type="button" id="confirm-send-pass-btn"
+                    class="px-5 py-2.5 rounded-xl bg-tg-green hover:bg-tg-greenDark text-white text-xs font-bold transition shadow-sm">
+                    Send Pass to Email
+                </button>
+            </div>
         </div>
     </div>
 
@@ -240,7 +379,7 @@
                             Mastering Job-Site Concrete Practice
                         </h1>
                         <p class="text-xs font-semibold uppercase tracking-widest text-tg-grey">
-                            Building the Future: Innovation in Ready-Mix &amp; Construction Technology
+                            From Pre-Pour Preparation to Defect Repair Technical seminar for contractors
                         </p>
                     </div>
 
@@ -260,11 +399,19 @@
                                 </div>
 
                                 <div class="flex items-start gap-3.5">
-                                    <div class="p-2.5 rounded-xl bg-tg-green/10 text-tg-greenDark shrink-0">
+                                    <a href="https://maps.app.goo.gl/dgjN44zsNbNSc5BcA" target="_blank" rel="noopener noreferrer" aria-label="Open venue location on Google Maps"
+                                       class="p-2.5 rounded-xl bg-tg-green/10 text-tg-greenDark hover:bg-tg-green/20 transition shrink-0">
                                         <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
-                                    </div>
+                                    </a>
                                     <div>
-                                        <p class="text-sm font-bold text-zinc-900">Courtyard by Marriott Riyadh Diplomatic Quarter (Assafeer Hall)</p>
+                                        <a href="https://maps.app.goo.gl/dgjN44zsNbNSc5BcA" target="_blank" rel="noopener noreferrer"
+                                           class="text-sm font-bold text-zinc-900 hover:text-tg-greenDark underline decoration-tg-green/60 underline-offset-4 transition inline-flex items-center gap-1.5">
+                                            <span>Courtyard by Marriott Riyadh Diplomatic Quarter (Assafeer Hall)</span>
+                                            <svg class="w-3.5 h-3.5 text-tg-greenDark shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+                                        </a>
+                                        <p class="text-xs text-tg-greenDark font-medium mt-0.5">
+                                            <a href="https://maps.app.goo.gl/dgjN44zsNbNSc5BcA" target="_blank" rel="noopener noreferrer" class="hover:underline">View Location on Google Maps</a>
+                                        </p>
                                     </div>
                                 </div>
                             </div>
@@ -656,7 +803,8 @@
             adminSubtab: 'confirmed',
             searchQuery: '',
             latestRegistration: null,
-            organizerUnlocked: false
+            organizerUnlocked: false,
+            pendingPassTarget: null
         };
 
         function loadSavedState() {
@@ -691,17 +839,29 @@
             state.customLogoUrl = logoUrl || '';
             const headerImg = document.getElementById('header-custom-logo');
             const headerSvg = document.getElementById('header-default-svg');
+            const passImg = document.getElementById('pass-custom-logo');
+            const passSvg = document.getElementById('pass-default-svg');
             const resetBtn = document.getElementById('reset-logo-btn');
 
             if (state.customLogoUrl) {
                 headerImg.src = state.customLogoUrl;
                 headerImg.classList.remove('hidden');
                 headerSvg.classList.add('hidden');
+
+                passImg.src = state.customLogoUrl;
+                passImg.classList.remove('hidden');
+                passSvg.classList.add('hidden');
+
                 if (resetBtn) resetBtn.classList.remove('hidden');
             } else {
                 headerImg.src = '';
                 headerImg.classList.add('hidden');
                 headerSvg.classList.remove('hidden');
+
+                passImg.src = '';
+                passImg.classList.add('hidden');
+                passSvg.classList.remove('hidden');
+
                 if (resetBtn) resetBtn.classList.add('hidden');
             }
         }
@@ -921,6 +1081,7 @@
             try {
                 await postToFormspree({
                     'Seminar': 'Mastering Job-Site Concrete Practice',
+                    'Subtitle': 'From Pre-Pour Preparation to Defect Repair Technical seminar for contractors',
                     'Status': 'Pending Review (Confirmation & Digital Pass to be sent later)',
                     'Reference ID': newRecord.passId,
                     'Person Name': fullName,
@@ -1023,6 +1184,7 @@
             try {
                 await postToFormspree({
                     'Seminar': 'Mastering Job-Site Concrete Practice',
+                    'Subtitle': 'From Pre-Pour Preparation to Defect Repair Technical seminar for contractors',
                     'Status': 'Priority Waitlist (Pending Review)',
                     'Reference ID': wlRecord.passId,
                     'Person Name': fullName,
@@ -1049,9 +1211,9 @@
         });
 
         // =========================================================
-        // SEND DIGITAL PASS ACTION (REMOVES BUTTON ONCE SENT)
+        // VIP PASS MODAL & SEND PASS ACTION (REMOVES BUTTON ONCE SENT)
         // =========================================================
-        window.sendPassEmail = async function(docId, listType) {
+        window.openPassPreview = function(docId, listType) {
             const list = listType === 'confirmed' ? state.attendees : state.waitlist;
             const item = list.find(entry => entry.id === docId);
             if (!item || !item.email) {
@@ -1059,25 +1221,67 @@
                 return;
             }
 
-            const subject = `Confirmed Registration & Digital Pass (${item.passId}) — Mastering Job-Site Concrete Practice`;
+            state.pendingPassTarget = { docId, listType };
+
+            document.getElementById('pass-modal-recipient').textContent = `Recipient: ${item.email}`;
+            document.getElementById('pass-card-id').textContent = item.passId || 'TGR-1001';
+            document.getElementById('pass-card-name').textContent = item.fullName || '—';
+            document.getElementById('pass-card-company').textContent = item.company || '—';
+            document.getElementById('pass-card-position').textContent = item.position || '—';
+            document.getElementById('pass-card-email').textContent = item.email || '—';
+            document.getElementById('pass-card-mobile').textContent = item.mobile || '—';
+
+            const projectRow = document.getElementById('pass-card-project-row');
+            const projectVal = document.getElementById('pass-card-project');
+            if (item.projectName) {
+                projectVal.textContent = item.projectName;
+                projectRow.classList.remove('hidden');
+            } else {
+                projectVal.textContent = '';
+                projectRow.classList.add('hidden');
+            }
+
+            const modal = document.getElementById('pass-modal');
+            modal.classList.remove('hidden');
+            modal.classList.add('flex');
+        };
+
+        window.closePassModal = function() {
+            const modal = document.getElementById('pass-modal');
+            modal.classList.add('hidden');
+            modal.classList.remove('flex');
+            state.pendingPassTarget = null;
+        };
+
+        document.getElementById('confirm-send-pass-btn').addEventListener('click', async () => {
+            if (!state.pendingPassTarget) return;
+            const { docId, listType } = state.pendingPassTarget;
+            const list = listType === 'confirmed' ? state.attendees : state.waitlist;
+            const item = list.find(entry => entry.id === docId);
+            if (!item || !item.email) return;
+
+            const subject = `VIP Pass (${item.passId}) — Mastering Job-Site Concrete Practice`;
             const body = [
                 `Dear ${item.fullName},`,
                 '',
-                'Your registration for the TRANSGULF READYMIX seminar has been reviewed and confirmed.',
+                'Your registration for TRANSGULF READYMIX has been confirmed. Here are your VIP Pass details:',
                 '',
-                '--- DIGITAL SEMINAR PASS ---',
-                `Pass / Reference ID : ${item.passId}`,
-                `Attendee Name       : ${item.fullName}`,
-                `Company             : ${item.company}`,
-                `Position            : ${item.position}`,
-                `Project Name        : ${item.projectName || 'Not Specified'}`,
-                'Seminar             : Mastering Job-Site Concrete Practice',
-                'Date                : Saturday, December 5, 2026',
-                'Time                : 8:00 AM – 5:00 PM',
-                'Venue               : Courtyard by Marriott Riyadh Diplomatic Quarter (Assafeer Hall)',
-                '----------------------------',
-                '',
-                'Please present this confirmation and Pass ID at the registration desk upon arrival.',
+                '==============================',
+                'VIP PASS — TRANSGULF READYMIX',
+                '==============================',
+                `Pass ID       : ${item.passId}`,
+                'Seminar       : Mastering Job-Site Concrete Practice',
+                'Topic         : From Pre-Pour Preparation to Defect Repair Technical seminar for contractors',
+                'Date & Time   : Saturday, December 5, 2026 | 8:00 AM – 5:00 PM',
+                'Venue         : Courtyard by Marriott Riyadh Diplomatic Quarter (Assafeer Hall)',
+                'Location Map  : https://maps.app.goo.gl/dgjN44zsNbNSc5BcA',
+                `Attendee Name : ${item.fullName}`,
+                `Company       : ${item.company}`,
+                `Position      : ${item.position}`,
+                `Project Name  : ${item.projectName || 'Not Specified'}`,
+                `Email         : ${item.email}`,
+                `Mobile Number : ${item.mobile}`,
+                '==============================',
                 '',
                 'Best regards,',
                 'TRANSGULF READYMIX | ENGINEERED FOR YOU'
@@ -1090,13 +1294,14 @@
             item.passSent = true;
             item.passSentAt = sentAt;
             persistState();
+            closePassModal();
             renderTable();
-            showToast(`Pass prepared for ${item.email}. Action button removed.`, 'success');
+            showToast(`VIP Pass sent to ${item.email}. Action button removed.`, 'success');
 
             try {
                 await postToFormspree({
                     'Seminar': 'Mastering Job-Site Concrete Practice',
-                    'Action': 'Digital Pass Sent by Organizer',
+                    'Action': 'VIP Pass Sent by Organizer',
                     'Reference ID': item.passId,
                     'Person Name': item.fullName,
                     'Company': item.company,
@@ -1106,7 +1311,7 @@
             } catch (err) {
                 console.warn('Formspree pass-sent log error:', err);
             }
-        };
+        });
 
         // =========================================================
         // ORGANIZER CAPACITY CAP UPDATES, SEARCH & CSV EXPORT
@@ -1335,7 +1540,7 @@
                     ? `<span class="inline-flex items-center px-2.5 py-1 rounded-md text-xs font-semibold bg-emerald-50 text-emerald-700 border border-emerald-200">
                             Pass Sent${item.passSentAt ? ` (${escapeHTML(item.passSentAt)})` : ''}
                        </span>`
-                    : `<button type="button" onclick="sendPassEmail('${safeId}', '${listType}')"
+                    : `<button type="button" onclick="openPassPreview('${safeId}', '${listType}')"
                             class="px-3 py-1.5 rounded-lg text-xs font-semibold bg-tg-green hover:bg-tg-greenDark text-white transition shadow-sm">
                             Send Pass
                        </button>`;
